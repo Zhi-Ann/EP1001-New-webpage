@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html>
+<head>  
+   <title>Stats for Nerds</title>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+</head>
+<body>
+    <div id ="container">
+        <div id="header">
+              <h1>WELCOME TO MY WORLD</h1>
+        </div>
+        
+        <div id="content"> 
+            <div id="nav">
+                <h3>Navigation</h3>
+                <ul><li><a class="selected" href="../index.html"> Home Page</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact </a></li>
+                    <li><a href="fablab.html">Fablab Safety & Tools </a></li>
+                    <br>
+                      <li><a href="Proectmangaement.html">Project Management</a></li>
+                    <li><a href="WebDevelopment.html">Web Development</a></li>
+                    <li><a href="Comaided.html">Computer Aided Design</a></li>
+                    <li><a href="3dprinting.html">3D Printing</a></li>
+                    <li><a href="comcontrolledcutting.html">Computer Controlled Cutting</a></li>
+                    <li><a href="embeddedprogramming.html">Embedded Programmings</a></li>
+                    <li><a href="moduleproject.html">Module Project</a></li>
+                </ul>
+            </div>
+            
+            <div id="main"> 
+                <h2>Embedded Programming</h2>
+                <img src="../images/programming/logo.jpg" height="auto" width="207px" style="float:right;  margin-right:30px; margin-top:30px; border:solid black; padding:2.5px; "/>
+                <h3><u>Arduino IDE Software</u></h3>
+                <h4><u>4 simple steps to start programming with Arduino IDE</u></h4>
+                <ul>1. Connect your UNO board to the host computer</ul>
+                <ul>2. Write your code on Arduino IDE </ul>
+                <ul>3. Compile and upload your completed sketch to UNO board</ul>
+                <ul>4. Press the reset button</ul>
+                <br>
+            <h3><u>Thinkercad</u></h3>
+                <img src="../images/programming/thinkercad.jpg" height="auto" width="207px" style="float:right;  margin-right:30px; margin-top:10px; border:solid black; padding:2.5px; "/>
+                <p>An online website that allows you to practice creating and designing your arduino circuit virtually without the need to do it hands-on. <br>Great way to start learning how to do basic coding for your arduino and understand the circuit connections clearly.</p>
+                
+            <h4>Example of a simple circuit programmed with an arduino uno</h4>
+                 <img src="../images/programming/thinker.PNG" height="auto" width="500px" style="  margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                <img src="../images/programming/code.png" height="auto" width="500px" style="  margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                <p>Coding on thinkercad is made simpler and easier to understand, the code shown above that i made with the pieces of instructions for 'blinking' can be translated and used on the actual aruduino software.</p>
+                <br>
+            <h3><u>Coding on arduino IDE</u></h3>
+                <p>For someone new to coding and still learning about the basics. Arduino IDE provides a list of useful coding examples for us to learn from. Those examples can be found by clicking on the 'File' icon on the top left corner and selecting 'Examples' and simply choose the code that you want to program and follow the instructions given. </p>
+                <img src="../images/programming/ardunioeg.png" height="auto" width="500px" style="  margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+            <p>I tried the example 'blink' on my ardunio to see if it works. I connected the Red LED bulb onto the built in LED on pin 13 and the other to the ground for a simple testing of the code.</p>
+                <video width="auto" height="300" controls>
+                    <source src="../images/programming/blinkvideo.mp4" type="video/mp4">
+                    <source src="../images/programming/blinkvideo.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+                </video>
+            <img src="../images/programming/blink.PNG" height="auto" width="600px" style= "margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+               
+            <p>Next, i tried programming the servo motor to rotate at certain angles.<br> For the 'loop' section, by typing the code <u>myservo.write()</u>, within the parenthesis itself, i can specify the angle i want the servo motor to turn and within the parenthesis of <u>delay()</u>, i can specify it's duration in milliseconds.</p>
+            
+            <video width="auto" height="300" controls>
+                    <source src="../images/programming/servomotorvid.mp4" type="video/mp4">
+                    <source src="../images/programming/servomotorvid.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+                </video>
+            <img src="../images/programming/servomotor.png" height="auto" width="600px" style= "margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+            <p>Next, with the sound sensor module, i was able to make the LED light bulb blink upon the detection of sound frequency by the sensor module.</p>
+                 <video width="auto" height="300" style="margin-top:60px;" controls>
+                    <source src="../images/programming/soundsensor.mp4" type="video/mp4">
+                    <source src="../images/programming/soundsensor.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+                </video>
+            <img src="../images/programming/soundsensorcode.PNG" height="420px" width="500px" style= "float: right; margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                <br><br><br><br><br><br>
+            <p>Next, i connected the LCD 16x2 display to my arduino uno and programmed it to display words on the screen.</p>
+                 
+                 <img src="../images/programming/LCD3new.jpeg" height="auto" width="300px" style= "float: right; margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                 <img src="../images/programming/LCD2.jpeg".jpeg height="400px" width="400px" style= "float:left ; margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                <img src="../images/programming/LCD1.jpeg".jpeg height="autp" width="300px" style= "float:right ; margin-right:30px; margin-top:28px; border:solid black; padding:2.5px; "/>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <p>Now that i've learnt how to program using the arduino software and how to code for the different type of materials used. I will try to incorporate the skills that i have learnt into my final module project.</p>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                </div>
+            
+        </div>
+        
+        <div id="footer">
+            Copyright &copy;2020 Zhi Ann
+        </div>
+             
+  
+    
+</body>
+
+
+
+
+
+
+</html>

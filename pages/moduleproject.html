@@ -1,0 +1,205 @@
+ <!DOCTYPE html>
+<html>
+<head>  
+   <title>Stats for Nerds</title>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+</head>
+<body>
+    <div id ="container">
+        <div id="header">
+              <h1>WELCOME TO MY WORLD</h1>
+        </div>
+        
+        <div id="content"> 
+            <div id="nav">
+                <h3>Navigation</h3>
+                <ul><li><a class="selected" href="../index.html"> Home Page</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact </a></li>
+                    <li><a href="fablab.html">Fablab Safety & Tools </a></li>
+                    <br>
+                      <li><a href="Proectmangaement.html">Project Management</a></li>
+                    <li><a href="WebDevelopment.html">Web Development</a></li>
+                    <li><a href="Comaided.html">Computer Aided Design</a></li>
+                    <li><a href="3dprinting.html">3D Printing</a></li>
+                    <li><a href="comcontrolledcutting.html">Computer Controlled Cutting</a></li>
+                    <li><a href="embeddedprogramming.html">Embedded Programmings</a></li>
+                    <li><a href="moduleproject.html">Module Project</a></li>
+                </ul>
+            </div>
+            
+            <div id="main"> 
+                <h2>Module Project</h2>
+                <h3>Brief idea of what my project is about</h3>   
+                <p>With the skills that i have learnt from embedded programming, 3d printing, lazer cutting etc. I plan on making a design which is something that i can be put in my house for decoration purposes, i want my project to be a meaningful one, something that will remind me of what i've learnt from this module for the past semester in Year 2.</p>
+            
+                <h3>Materials needed:</h3>
+                <ol>
+                    <li>Arduino uno x 1</li>
+                    <li>Mini breadboard x 1</li>
+                    <li>Sound sensor module x 1</li>
+                    <li>Servo Motor x 1</li>
+                    <li>LED Lightbulbs (Red, Yellow, Green, White) x 5</li>
+                    <li>male to male jumper wires</li>
+                    <li>male to female jumper wires x 10</li>  
+                </ol>
+            
+             <h3>Sketch of design</h3>
+                <img src="../images/programming/newsketchdone.jpeg".jpeg height="auto" width="500px" style= " margin-left:120px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                <img src="../images/programming/newsketch.jpeg".jpeg height="300px" width="365px" style= "margin-right:0px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                <img src="../images/programming/newsketch2.jpeg".jpeg height="300px" width="365px" style= " margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                
+                <br>
+                <p>For now, since i'm still at the planning stage. My idea would be to make a design where the servo motor would be used as a platform indicated as 'stage' in my sketch where i will attach a circular piece of PLA which is attached to a design that will rotate about the stage. The smaller circles surrounding the stage will be a cut out for the placement of the LED lightbulbs. This design is made in a sheltered background so that the when the light flicker in responds to sound vibrations detected from the sound sensor module, the light will be effectively displayed, shining the colours of the different lights onto the Design as it rotates about the stage.</p>
+                <p> <u>My plans on how i'm going to proceed on with the project:</u> </p>
+                    <ol>
+                        <li>Design the casing on fusion 360 for <b>lazer cutting</b> </li>
+                        <li>Code the arduino to control the LED lightbulbs and servo motor</li>
+                        <li><b>3D print</b> the pieces needed to build the shelter and more</li>
+                
+                    </ol>
+                
+            <br> 
+           
+                
+              <p>Here is my finalised sketch made on fusion 360, there were some slight differences from the sketch that i drew as i made some adjustments to my design as i go along the way. The concept is still the same but instead of having a top and bottom casing, i made one such that the individual pieces can be attached together at the slots. </p>
+                
+                <img src="../images/programming/fusion360done.png".jpeg height="300px" width="350px" style= " margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                <img src="../images/programming/fusion360donez.png".jpeg height="300px" width="350px" style= " margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                <p>With the help of the TSO, i transferred my sketch in dxf file type to the computer programming the lazer cutting machine and start to laser cut my 6 pieces of sketch designed for the casing. The machine had to cut twice for the pieces to be fully cut out from the board. The board material that i used is a large piece of 5mm ply wood. </p>
+                
+                 <video width="auto" height="300px" style="margin-bottom:20px;"   controls>
+                    <source src="../images/programming/lasercut.mp4" type="video/mp4">
+                    <source src="../images/programming/lasercut.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+                </video>
+                
+                <img src="../images/programming/casing%20done.jpeg".jpeg height="auto" width="500px" style= " margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                <p>(Picture shows the complete casing after all the sides are slotted in and glued together.) </p>
+                
+                
+                
+            
+                <br><br>
+              
+                <p>Here is the finalised coding that i made with the help and guidance of my peers and lecturers which program for both the servo motor and the LED lightbulbs. It works when the sound sensor module detects certain loudness of sound, the LED lightbulbs will light up while the servo motor will rotate back and forth simultanously.</p>
+                
+                <video width="auto" height="300px" style="margin-bottom:20px;"   controls>
+                    <source src="../images/programming/finalisedcoding.mp4" type="video/mp4">
+                    <source src="../images/programming/finalisedcoding.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+                </video>
+
+                <img src="../images/programming/Screenshot%20(139).png".jpeg height="auto" width="590px" style= " margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                <img src="../images/programming/Screenshot%20(140).png".jpeg height="auto" width="760px" style= " margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                <br><br><br>
+                <p>There are three designs that i will be 3d printing: </p>
+                <ol>    
+                    <li>Baby yoda figurine</li>
+                    <li>Shelter for the stage</li>   
+                    <li>A cover for the sound sensor module</li>
+                </ol>
+                
+                <p>For the baby yoda figurine, i got the design from a website called <b>thingverse</b>, here is the link to the page if you are interested in the design @
+                <a href="https://www.thingiverse.com/thing:4038181"><u>https://www.thingiverse.com/thing:4038181</u></a> . <br>The shelter and cover designed on the fusion 360 was based on the dimensions i've made to fit the casing.</p>
+                
+                
+                <img src="../images/programming/shelterfusion.png".jpeg height="auto" width="300px" style= " margin-right:40px; margin-bottom:80px; border:solid black; padding:2.5px; "/>
+                
+                <img src="../images/programming/soundsensorcover.png".jpeg height="422px" width="300px" style= " margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                
+                
+                
+                <p>Here are the 3d printed objects</p>
+                
+                <img src="../images/programming/babyyoda.jpeg".jpeg height="auto" width="300px" style= " margin-right:40px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                <img src="../images/programming/shelter.jpeg".jpeg height="422px" width="300px" style= " margin-right:30px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                <img src="../images/programming/shelterreal.jpeg".jpeg height="auto" width="480px" style= " margin-left: 90px; margin-top:30px; border:solid black; padding:2.5px; "/>
+                
+                
+                
+                
+                
+                
+                
+                <br><br><br>
+                <h3>Final product - Interactive Baby Yoda display</h3>
+                <p>At this stage, i'm done with laser cutting/3d printing/programming the code. All that's left is to assemble the various parts and components together to complete my project.</p>
+                
+                <img src="../images/programming/final.jpeg".jpeg height="auto" width="600px" style= " margin-left: 50px; margin-top:0px; border:solid black; padding:2.5px; "/>
+                
+                <p>Here is a video showing how it works</p>
+                
+                <video width="auto" height="300px" style="margin-left:50px;"   controls>
+                    <source src="../images/programming/babyyodashrine.mp4" type="video/mp4">
+                    <source src="../images/programming/babyyodashrine.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+                </video>
+                
+                <p>I noticed that the sound sensor might be a little bit too sensitive to background noise at times, in addition to the sound sensor cover that i made, i will be surrounding cotton material around the sensor to muffle and prevent too much external noises from triggering the system.</p>
+                
+                <h3>Conclusion of my final project</h3>
+                <p>In conclusion, as i mentioned before at the start of the project, i wanted to make something unique and meaninful that reminds me of what i've learnt in this module. Though there are still many things that can still be improved, however, i'm satisfied with the outcome as it shows most of the applications that i managed to learn in this module(lazer cutting, 3d printing, designing etc). </p>
+                <p>This design is a interactive design which allows you to sort of make an interaction with the figurine, as shown in the video, the figurine turns around and the background lights up when the snapping sound is detected. It was pretty interesting and fun to watch and play with. </p>
+                
+                <p>Link to presentation slide (1920 x 1080) @
+                    <a href="https://drive.google.com/file/d/1cNAEHod9TvLLG9k7oT5Q_LPkg2M07nm1/view?usp=sharing"><u>https://drive.google.com/file/d/1cNAEHod9TvLLG9k7oT5Q_LPkg2M07nm1/view?usp=sharing</u></a> 
+                     </p>
+                
+                <p>Link to my video @
+                    <a href="https://drive.google.com/file/d/1MVKzVVmNragWwE_Nz2zaSpxIvjwg6GhD/view"><u>https://drive.google.com/file/d/1MVKzVVmNragWwE_Nz2zaSpxIvjwg6GhD/view</u></a> 
+                     </p>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+            
+        </div>
+        
+        <div id="footer">
+            Copyright &copy;2020 Zhi Ann
+        </div>
+             
+  
+    
+</body>
+
+
+
+
+
+
+</html>
