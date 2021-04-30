@@ -30,10 +30,10 @@ body {background-image: url(images/flower2.jpg);
     float: left;
     background-image: url(images/bear.jpg);
     background-size:cover;
-    background-position: 588px 1100px;
+    background-position: 767px 1690px;
     margin-right:10px;
-    height:550px; 
-    margin-bottom:15px;
+    height:750px; 
+    margin-bottom:10px;
 }
 #main{width:785px;
     float: right;
@@ -44,7 +44,7 @@ body {background-image: url(images/flower2.jpg);
     font-weight: bold;
 }
 a{text-decoration: none;
-    color: blueviolet;
+    color: darkmagenta;
     
    
 }
