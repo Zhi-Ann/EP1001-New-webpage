@@ -19,8 +19,8 @@
                     <li><a href="fablab.html">Fablab Safety & Tools </a></li> 
 
                     <hr style="height:1.5px;color:gray;background-color:gray; width:70%; margin-left:0">
-                    <li><a href="electronics%20production.html">Electronics Production</a></li><br>
                     <li><a href="electronics%20design.html">Electronics Design</a></li><br>
+                    <li><a href="electronics%20production.html">Electronics Production</a></li><br>
             <li><a href="2D%20computer%20controlled%20machining.html">2D Computer Controlled Machining</a></li><br>
                     <li><a href="2D%20routing%20.html">2D Routing</a></li><br>
                     <li><a href="embedded%20programming.html">Embedded Programming</a></li><br>
@@ -32,10 +32,62 @@
             </div>
             
             <div id="main"> 
-                <h2>Insert header</h2>
-                <p>Insert text here</p>
-            
+                <h2>Electronic Design</h2>
+                <h3>What is electronic design?</h3>
+                <p><b>Electronic design</b> is a process of working out a circuit board that works for it's intended purpose, which will eventually help you to construct your own physical circuit board. This has to be done prior to electronic production.</p>
+                
+                <h3>What is a PCB Board?</h3>
+                <p>PCB stands for Printed Circuit Board, it works by mounting electronic components onto the board and the traces allows the components to connect together and form a working circuit.</p>
+    
+                <h3>Setup and Installation</h3>
+                <p>To start of, we would have to install the software <a href="https://www.autodesk.com.sg/products/fusion-360/overview?panel=buy&AID=13084958&PID=8206971&SID=jkp_CjwKCAjwlYCHBhAQEiwA4K21m40BA9WYTJRUsnuQrQR_lD8lZ3FgYGuJ9crFOO3-hZOZPHWI0aaXfhoCpyEQAvD_BwE&cjevent=d25c499ddc8c11eb835539410a180511&mktvar002=afc_sg_deeplink&affname=8206971_13084958&cjdata=MXxOfDB8WXww&term=1-YEAR"><u>Autodesk Eagle</u></a> which can be downloaded by clicking on the hyperlink.</p>
+                
+                <p>Once the software has been installed, we have to download 2 files from <a href="https://gitlab.fabcloud.org/pub/libraries/electronics"><u>FAB Electronics components</u></a>  for Autodesk Eagle. This will give us the necessary components needed for us to design our own circuit Board. </p> 
+                
+                <p>To download the two files, click on the "Eagle" folder and install the following: "fab.dru" and "fab.lbr".</p>
+                <img src="../images/pic1.PNG" height="230px" style=" border:solid black; padding:1px; margin-right:0px; margin-bottom: 20px;  "/>
+                <img src="../images/pic2.PNG" height="180px" width="400px" style=" border:solid black; padding:1px; margin-bottom: 20px; "/>
+                
+                <p>Next, click on File Explorer and go to this directory Documents > Eagles > libraries, cut & paste both downloaded files to this location. </p>
+                <img src="../images/pic3.PNG" height="300px" style=" border:solid black; padding:1px; margin-bottom: 20px; "/>
+                
+                <p>To enable access to "fab.lbr", open AutoDesk Eagle. At the top left hand corner, click on "Libraries", right click on "fab.lbr" folder and check the box "use", a green icon will appear beside the file name which shows that it is activated. This allows us to use the components that are more commonly used to build our circuit board. </p>
+                <img src="../images/pic4.PNG" height="300px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+              
+                <h3>Our Assignment</h3>
+                <p>In our given assignment by Mr Steven, we were told to design our own circuit board. Hence, i have decided to design a 85ATiny PCB. </p>
+                
+                <p>We start of with drawing out our schematic diagram. On Eagle software at the top left hand corner of the page, click on File > New > New Schematic.</p>
+                <p>To make a 85ATiny PCB we need the following components:</p>
+                <ul>
+                <li>Tiny 45(85) Microchip x1</li>
+                <li>AVR ISP SMD x1</li>
+                <li>FTDI Header x1</li>
+                <li>6mm Button x1</li>
+                <li>Fab 1u Capaciter x1</li>
+                <li>Ground x5</li>
+                <li>VCC x4</li>
+                <li>Fab LED x1</li> 
+                <li>Fab 10kohms Resistor x2</li>    
+                <li>Fab 499ohms Resistor</li>    
+                </ul>  
+                
+                <p>There are two ways we can do the wiring for our circuit board. Firstly, by <b>manual wiring</b> which is to connect wires from one component to another. The second method is more efficient and has less complications when connecting mutiple wires, this is done by <b>naming the wires</b> with the same names that is attached to the respective ends of the component, and Eagle will automatically ask you if you would want to connect the two components from the named wires.  </p>
+                
+                <p>So here is my completed schematic diagram for ATiny45 PCB</p>
+                <img src="../images/picc5.PNG" height="400px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
 
+
+                <p>To prepare our Trace/Outline files for milling out the PCB, we have to generate a visual representation of our circuit board. Click on the "switch/generate" option on the top left hand corner of the page, this will bring us to our board with all the wirings and components made in the schematic diagram.</p>
+                <img src="../images/pic6.png" height="200px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <p>Place the components inside the yellow box in a nice and orderly manner. Once done, click on the autorouter icon, click "continue" and then "start". Ensure that the routing variants is 100% before clicking "end job", this ensure that your wiring has the best possible route. </p>
+                 <img src="../images/pic7.png" height="230px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+
+                <img src="../images/pic8.PNG" width="320px" height="230px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+
+
+                
             </div>
             
         </div>
