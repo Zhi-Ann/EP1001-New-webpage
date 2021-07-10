@@ -39,12 +39,39 @@
                 <p>To use mods to generate the G.code files, we have to save our designs made into <b>Monochrome</b> image(PNG) which are the trace and outline. Under "Layers settings", hide the components for your trace/outline so that either one of the trace/outline is visible,  click on file > export > image, check the "monochrome" box and ensure resolution is 1000 DPI, click "ok" to save your trace/outline files into monochrome images.</p>
                 
                 <p>With your traces & Outline images(PNG) ready, click on this hyperlink <a href="https://skeatz.github.io/mods/"><u>Mods</u></a> to format and convert your images to g.code files.</p>
-                <p>On the page, right click and select program > open server program > G-code - mil 2D PCB png. Insert your trace/outline image by clicking "select png file". You can follow the recommended settings to make your trace/outline files. </p>
+                <p>On the page, right click and select program > open server program > G-code - mil 2D PCB png. Insert your trace/outline image by clicking "select png file". You can follow the recommended settings to make your trace/outline files. Once done, click <b>"calculate"</b> and your G.code file will be generated. </p> 
+                
+                <p><b>Settings for Traces</b></p>
+                <p>Select <b>"mil traces (1/64)"</b>. I also changed the offset number to "1", thus the CNC cutter will only do 1 pass of cutting, this is due to personal preferance as i believe it will do a nicer cut.</p>
+                 <img src="../images/pic14.PNG" width="780px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <p><b>Settings for Outline</b></p>
+                <P>Select <b>"mil outline (1/32)"</b>.</P>
+                <img src="../images/pic15.PNG" width="780px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
                 
                 
+                <h4>Method 2 (Using Eagle Software)</h4>
+                <p>With the files we've downloaded into Eagles, we can use it to generate our G.code files directly. Firstly, on the tab menu, click on "Run ULP", select the second option "pcb-gcode-setup" and click "ok". Follow the settings for "Generation Options" and "Machine" down below, select "Accept and make my board" and you will generate your g.code files. You can find your files by going to Documents > EAGLE > projects(go to your project folder) and find the the g.code files for etch(traces) and mill(outline).</p>
+                <img src="../images/pic16.PNG" height="300px" width="280px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <img src="../images/pic17.png" height="500px" width="680px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <img src="../images/pic18.png" height="500px" width="680px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <p></p>
                 
+                <h3>Cutting the circuit Board</h3>
+                <p>The UCCNC software operates the <b>STEPCRAFT CNC machine</b>. This machine is programmed to cut your PCB with the instructions from your g.code files, the X-axis allows movement “left” and “right”, Y-axis allows movement “forward” and “backward”, Z-axis allows movement “up” and “down”. </p>
                 
+                    
+                <img src="../images/pic19.jpg" width="600px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <p>Things to take note when using the CNC machine: </p>
+                <ol>
+                <li>Ensure machine is working and your PCB is placed firmly to prevent it from  moving which may affect the cutting.</li>
+                <li>Click on Toolpath > load files and select your traces/outline files. You should cut your board traces first.</li>
+                <li>Test to ensure that the probe is working, and set the value of Z first, followed by X/Y values.</li>
+                <li>Once eveything is set up, turn on your drill and press "cycle start" to start the cutting process.</li>
+                <li>To stop the cutting process, click "cycle stop".</li>
+                <li>Press the emergency Red button located on the machine in case of an emergency.</li>
+                    
                 
+                </ol>
                 
                 
                 
