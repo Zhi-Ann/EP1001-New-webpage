@@ -55,10 +55,10 @@
                 <img src="../images/pic4.PNG" height="300px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
               
                 <h3>Our Assignment</h3>
-                <p>In our given assignment by Mr Steven, we were told to design our own circuit board. Hence, i have decided to design a 85ATiny PCB. </p>
+                <p>In our given assignment by Mr Steven, we were told to design our own circuit board. Hence, i have decided to design a <b>ATiny85</b> PCB. </p>
                 
                 <p>We start of with drawing out our schematic diagram. On Eagle software at the top left hand corner of the page, click on File > New > New Schematic.</p>
-                <p>To make a 85ATiny PCB we need the following components:</p>
+                <p>To make a ATiny85 PCB we need the following components:</p>
                 <ul>
                 <li>Tiny 45(85) Microchip x1</li>
                 <li>AVR ISP SMD x1</li>
@@ -81,10 +81,26 @@
                 <p>To prepare our Trace/Outline files for milling out the PCB, we have to generate a visual representation of our circuit board. Click on the "switch/generate" option on the top left hand corner of the page, this will bring us to our board with all the wirings and components made in the schematic diagram.</p>
                 <img src="../images/pic6.png" height="200px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
                 
-                <p>Place the components inside the yellow box in a nice and orderly manner. Once done, click on the autorouter icon, click "continue" and then "start". Ensure that the routing variants is 100% before clicking "end job", this ensure that your wiring has the best possible route. </p>
+                <p>At the top menu bar, click on "tools" and select "DRC", change the settings under the "clearance" and "size" tab as shown in the picture below, these settings will determine the values and dimensions when we route the wires.</p>
+                <img src="../images/pic9.PNG" width="370px" height="300px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <img src="../images/pic10.PNG" width="370px" height="300px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <p>Near the menu tab, click on "Grid", check the display option and set the values in <b>mm</b> as follows. This allows us to have a rough gauge of the size of our PCB. </p>
+                <img src="../images/pic12.png" width="350px" height="300px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <img src="../images/pic11.PNG" width="350px" height="300px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                    
+                    
+                <p>Place the components inside the yellow box in a nice and orderly manner. There are two ways of routing, firstly by manually route the wire connections or another way is by autorouting, which can be done by selecting the autorouter icon, click "continue" and then "start". Do ensure that the routing variants is 100% before clicking "end job", this allows your wiring to have the best possible route. </p>
+                
                  <img src="../images/pic7.png" height="230px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
 
-                <img src="../images/pic8.PNG" width="320px" height="230px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <p>Next, to add outlines to our traces, at the toolbar select "line" and then at the tab above, change the layer to "46 Milling" and draw the outline around your traces. Do shrink the size of the yellow box with enough space to fit your PCB design as that will be the working spaces detected by the stepcraft system when we do the cutting. </p>
+                <img src="../images/pic13.png" width="250px" height="300px" style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <img src="../images/pic8.PNG" width="600px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                
+                <p>With my ATiny85 Board design ready, i can move on to the next part which is Electronic Production. YAY!</p>
 
 
                 
