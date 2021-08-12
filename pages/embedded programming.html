@@ -32,8 +32,115 @@
             </div>
             
             <div id="main"> 
-               <p>Insert text here</p>
-            
+                <h3>What is an Embedded System?</h3>
+                <p>An embedded system is a microprocessor- or microcontroller-based system of hardware and software designed to perform dedicated functions within a larger mechanical or electrical system. </p>
+                
+                <h3>What is Embedded Programming?</h3>
+                <p>Embedded programming is to write out a program instructions for embedded systems, this is often referred to as firmware, and are stored in read-only memory or flash memory chips.</p>
+                
+               
+                <h3>How to start programming our ATTiny85 board?</h3>
+                <p>The ATTiny85 board we created from scratch can't be programmed right away like an Arduino board as it does not have a  usb connector for us to plug it directly to our computer for programming. However, with the In-System Programming (ISP) device that we created, we can use it to programme our ATTiny85 board.</p> 
+                
+                 <img src="../images/pic24.jpg"  width="300px"  style=" border:solid black; padding:1px; margin-right: 60px;  "/>
+                
+                 <img src="../images/pic25.jpg"  width="300px"  style=" border:solid black; padding:1px; "/>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>ATTiny85 Board</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>In-System Programming (ISP) Board</u></p>
+                
+                <h2>Programming the ISP board to make it a programmer</h2>
+                <p>Before we can use our ISP board as a programmer, we have to programme the board to give it information and instructions so that it knows what to do and then it can act as a programmer.</p>
+                <p>This process is rather complex hence do follow all the steps properly, i referred to this webpage <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/windows_avr.html"><u>install a complete GCC-based toolchain</u> </a> by Brian from fab academy, as well as 
+                <a href="http://fab.academany.org/2020/labs/singapore/students/noel-kristian/exercise04.html"><u>Noel Kristan's webpage</u></a>.</p>
+                
+                <p>Here are the softwares that you need to install</p>
+                <ul>
+                <li><a href="https://git-scm.com/download/win">Git bash</a> - To check that the commands installed can work </li> 
+                <li><a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/make-3.81.exe">GNUMAKE</a></li>
+                <li><a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/avrdude-win-64bit.zip">avrdude</a></li>
+                <li><a href="https://blog.zakkemble.net/avr-gcc-builds/">avr-gcc-11.1.0-x64-windows.zip (100.0 MB)</a></li>
+                <li><a href="https://zadig.akeo.ie/">Zadig</a> - To install driver for programmer</li>
+                <li><a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_firmware_bdm_v1.zip">Firmware</a></li>
+                </ul>
+                <p>On your computer search bar, search for "advanced system properties", then select "Environmental Variables", under user variables, click on the one with "Path" and press edit. Select "New" and add in these 3 values:</p>
+                <li>C:\Program Files\avr-gcc-11.1.0-x64-windows\bin</li>
+                <li>C:\Program Files\avrdude</li>
+                <li>C:\Program Files (x86)\GnuWin32\bin</li>
+               
+                <p>Once done, click "ok" and this will tell Windows where to locate the software tools that you've installed.</p>
+                <img src="../images/environmentalvariable.PNG"  width="360px"  style=" border:solid black; padding:1px; margin-bottom: 20px;  "/>
+                <img src="../images/environment.png"  width="362px"  style=" border:solid black; padding:1px; margin-bottom: 20px;  "/>
+                
+               
+                <p>Next, plug in your ISP board into your computer, open up the Zadig software that you've installed. On the software tab under "Options", check "List All Devices", you should be able to see your ISP board as "USBtinySPI", look for the driver "libusb-win32 (v1.2.6.0)" and click install driver.</p>
+                 <img src="../images/zadig.png"  width="550px"  style=" border:solid black; padding:1px; margin-bottom: 20px;  "/>
+                
+                <h3>Programming the ISP board</h3>
+                <p>To programme our target ISP board, we have to use an already programmed ISP board that will be used to connect to your computer as well as target ISP board as shown below.</p>
+                <img src="../images/programmer.jpg"  width="550px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <p>With the Firmware file you installed, open the folder and open the file "Makefile" using a text editor such as Notepad.Since i'm using a ATTiny85, in the makefile, change the MCU to "attiny85", click save and exit. </p>
+                <img src="../images/makefile.PNG"  width="550px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <p>Go to your Firmware file directories, click on the directory link and add "cmd" to open up the command prompt in that directory. In the command prompt, type "make" and you will get the these three files in your firmware.</p>
+                <img src="../images/make.PNG"  width="550px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <img src="../images/makefirmware.png"  width="550px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                
+                 
+                <p>Type the following commands:</p>
+                <p><b>make flash</b></p>
+                <img src="../images/make%20flash.png"  width="780px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <p><b>make fuse</b></p>
+                <img src="../images/make%20fuse.png"  width="780px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <p><b>make rstdisbl</b></p>
+                <img src="../images/make%20rstdisbl.png"  width="780px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <p>And with that, you have finished programming your ISP board! </p>
+                
+                <h2>Using the ISP board to programme the ATTiny85 board</h2>
+                <p>To programme the ATTiny85 board, let us understand the microcontroller and it's pinout information.</p>
+                <img src="../images/attiny85guide.png"  width="780px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <p>Firstly, we have to import a library into arduino so that it can recognise the ATTiny85 board. Open the Arduino software and on the menu bar tab at the top left hand corner, click on File > Preferences and then inset this url "http://drazzy.com/package_drazzy.com_index.json" into Additional Boards Manager URLs and click ok.</p>
+                <img src="../images/arduino.PNG"  width="780px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <p>Next, at the menu bar tab, click on Tools > Manage Libraries... and search "ATTiny Core", intsall the library by Spence Konde.</p>
+                 <img src="../images/spence.png"  width="480px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <p>Connect the ISP board to your computer and ATTiny85 board, ensure the pinout are correctly connected.</p>
+                <img src="../images/isppp.jpg"  width="480px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <p>On arduino, on the menu bar go to tools tab,and use the following settings in the picture indicated in red box down below. Once the settings are done, click on "Burn Bootloader" and it will allow your ATTiny85 board to be programmable in Arduino.</p>
+                <img src="../images/toolss.png"  width="480px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <p>Finally, we can upload our programme onto the ATTiny85!Once you are done with your codes, on the tab menu, go to sketch, and click "Upload Using Programmer". And you are done!  </p>
+                <img src="../images/final.png"  width="480px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+
+                <h3>Testing out our ATTiny85 Board using ISP programmer</h3>
+                <p>Here is a simple blink code from the library, i set the pin to led 4 and uploaded the sketch.</p>
+                <img src="../images/blinkcode.PNG"  width="220px"  style=" border:solid black; padding:1px;"/>
+
+                <video width="500"  controls>
+                   <source src="../images/blink.mp4" type="video/mp4">
+                   <source src="../images/blink.mp4" type="video/ogg">
+                   Your browser does not support the video tag.
+                </video>
+                
+                <p>Through my PCB board making and configuring experience, i made mistakes and gained some valuable experience. There were issues like not having the board cut nicely in PCB milling and i had to make mutiple attempts, to excessive soldering leading to connectivity issues, and to issues that caused me a huge headache but had a very simple solution like the ISP not showing recognition to laptop due to the touching plate not touching each other.  </p>
+                
+                <p>All in all,that's the end of embedded programming! It was a long process all the way from electronic design and electronic production to finally programming those boards that were crafted from scratch. Thanks to the help from <b>Xaiver</b> as well as guidance from fellow friends and teachers, i was eventually able to make my PCB work!</p>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
 
             </div>
             
