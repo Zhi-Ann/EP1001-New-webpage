@@ -33,15 +33,71 @@
             
             <div id="main"> 
                <p>To make a mould design on fusion 360, let us watch this interesting video that shows you how. </p>
-                <iframe width="642" height="361" src="https://www.youtube.com/embed/vKZx9eHEL6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="642" height="361" src="https://www.youtube.com/embed/f-Zs3lx5OQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 
-                <p>For moulding and casting, i referred to Mr Yeo's Webpage 
-                <a href="http://fab.academany.org/2020/labs/singapore/students/gausiong-yeo/exercise15.html">Moulding and Casting</a> on how to create the mould.</p>
+                <p>For moulding and casting, i referred to Mr Yeo's Webpage <u>
+                <a href="http://fab.academany.org/2020/labs/singapore/students/gausiong-yeo/exercise15.html">Moulding and Casting</a></u> on how to create the mould.</p>
                 
-                <p>I used fusion 360 to do a 3d design of a inverted cut out of the Pentagon mould that has a 3-axis finish cut. Here is the finished design.</p>
-                <img src="../images/pentagon.PNG"  width="520px"  style=" border:solid black; padding:1px;"/>
+                <p>I used fusion 360 to do a 3d design of a inverted cut out of the Pentagon mould that has a 3-axis finish cut.</p>
                 
-                <p>After designing the mould, on the menu tab, go to manufacture</p>
+                <p>I started by creating a sketch of two pentagon, one above the other.</p>
+                <img src="../images/pentagonsketch.PNG"  width="520px"  style=" border:solid black; padding:1px;"/>
+                
+                <p>Afterwards, using the create > loft function, i created a transition shape between the two sketch profile which formed my 3d pentagon shape.</p>
+                <img src="../images/pentagonshape.PNG"  width="520px"  style=" border:solid black; padding:1px;"/>
+                
+                <p>Next, i created a rectangular box that would encapsulate the pentagon mould, using modify > combine, i made a cutout of the mould on the rectangular box. Ensure that the base of the rectangle box is also the base of the pentagon as this allows the cutout of the rectangle box which has the mould design.</p>
+                <img src="../images/pentagonmodifycombine.PNG"  width="520px"  style=" border:solid black; padding:1px;"/>
+                
+                <p>Create another rectangle that will contain the entire design, extrude the design, and save as a new body.</p>
+                <img src="../images/ANOTHERONE.PNG"  width="520px"  style=" border:solid black; padding:1px;"/>
+                
+                <p>Now using modify > combine again, cut out the rectangle box with mould shape onto the larger rectangle box. This creates the mould structure of your pentagon mould.</p>
+                <img src="../images/cutcut.PNG"  width="520px"  style=" border:solid black; padding:1px;"/>
+                
+                <p>With this mould structure created. We can change from Design > Manufacture, where we choose our settings and start to generate the g.code file required for milling using the Stepcraft machine.</p>
+                <img src="../images/mouldzzz.PNG"  width="520px"  style=" border:solid black; padding:1px;"/>
+                
+            
+                <p>After designing the mould, on the menu tab, go to manufacture. From here onwards, i used Mr yeo's setting for the milling process. Once setting for parameter is done, we can generate toolpath by selecting Actions > Generate.</p>
+                
+                <p>Right click and select Post Process, click "All vendors" and select "WinCNC" in the listing to generate the G-code.</p>
+                <img src="../images/postprocess.PNG"  width="520px"  style=" border:solid black; padding:1px;"/>
+                
+                <p>With the g.code file ready, we will be using the Stepcraft machine to do out the milling of the mould design.</p>
+                
+                <video width="500"  controls>
+                   <source src="../images/mouldcutss.mp4" type="video/mp4">
+                   <source src="../images/mouldcutss.mp4" type="video/ogg">
+                   Your browser does not support the video tag.
+                </video>
+                
+                <p>Before we begin with maiking our mould, we have to wear a pair of safety gloves and prepare a setup as shown below. In the set up, we need a vacuum pump and a container for the vacuuming process, we also need the easymould which comes in two different containers where we have to mix an equal amount of each component for the formation of mould.</p>
+                <img src="../images/setupss.jpg"  width="520px"  style=" border:solid black; padding:1px;"/>
+                
+                <p>Since, my mould that i'll be doing is rather small, i mixed 5ml of component A with 5 ml of component B to create the mould mixture. Stir the mould mixture well to ensure homegnity of both components, once the components are mixed, it has a shelf live of 15 minutes before the hardening process.</p>
+                <img src="../images/mouldmix.jpg"  width="520px"  style=" border:solid black; padding:1px;"/>
+                
+                <p>Next, using the vacuum pump, we use the vacuum system set up to degass the mixture, so that air trapped in the mixture are removed which will that cause tiny air pockets to form within the mould mixture itself.</p>
+                <img src="../images/vacuum.jpg"  width="320px"  style=" border:solid black; padding:1px;"/>
+                <img src="../images/vacuum11.jpg"  width="320px"  style=" border:solid black; padding:1px;"/>
+                
+            <p>Once ready, we can pour the mixture into our finished milling mould design. Leave the mould to cure for 24h in a dry and cool place.</p>
+                 <img src="../images/mouldlast.jpg"  width="320px"  style=" border:solid black; padding:1px;"/>
+                
+                <p>And after curing, we have our mould structure ready!</p>
+                
+                 <img src="../images/moull.jpg"  width="320px"  style=" border:solid black; padding:1px;"/>
+                
+                <p>Next, to prepare the actual mould, we use a mixture of  Epicote 1003 resin and  Epicote 1003 harderner in a ratio of 3:1. For me, since my mould design is rather small, i used  6ml:2ml.</p>
+                <img src="../images/hardener.PNG"  width="320px"  style=" border:solid black; padding:1px;"/>
+                <p>Once the mixture is mixed throughly, let it degass under the vacuum system as shown previously to remove air bubbles, onces that is done, pour the mixture into the mould structure.</p>
+                <img src="../images/doneeee.jpg"  width="320px"  style=" border:solid black; padding:1px;"/>
+                <p>Once the mould is done curing it a cool and dry place for 24h, we have finally created our mould design for the pentagon!</p>
+                <img src="../images/1.jpg"  width="320px"  style=" border:solid black; padding:1px;"/>
+                <img src="../images/2.jpg"  width="320px"  style=" border:solid black; padding:1px;"/>
+
+
             
 
             </div>
