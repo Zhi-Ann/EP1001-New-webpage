@@ -21,11 +21,11 @@
                     <hr style="height:1.5px;color:gray;background-color:gray; width:70%; margin-left:0">
                     <li><a href="electronics%20design.html">Electronics Design</a></li><br>
                     <li><a href="electronics%20production.html">Electronics Production</a></li><br>
-            <li><a href="2D%20computer%20controlled%20machining.html">2D Computer Controlled Machining</a></li><br>
+                    <li><a href="2D%20computer%20controlled%20machining.html">2D Computer Controlled Machining</a></li><br>
                     <li><a href="2D%20routing%20.html">2D Routing</a></li><br>
                     <li><a href="embedded%20programming.html">Embedded Programming</a></li><br>
                     <li><a href="moulding%20and%20casting%20.html">Moulding & Casting</a></li><br>
-    <li><a href="Interface%20&%20Applications%20Programming.html">Interfacing & Application Programming</a></li><br>
+                    <li><a href="Interface%20&%20Applications%20Programming.html">Interfacing & Application Programming</a></li><br>
                     <li><a href="moduleproject.html">Module Project</a></li>
                     
                 </ul>
@@ -38,14 +38,79 @@
                 <p>I got the idea of making a lithophane after searching on the internet and looking at other students projects for references as well as a source of inspiration. As i kept thinking about how i can make this lithophane of mine unique as well as decorative, i realised that i can also make use of the concepts that i've learnt in DFAB 1 to make a CNC cutout of a rectangular box to store my electrical components to act as my base, and this idea eventually led to my first prototype design.</p>
                 
                 <img src="../images/pic23.jpg" height="320px" width="350px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <h4>CNC Cutting</h4>
+                <p>Firstly, to make the base casing for my Lithophane design, i used fusion 360 to design a 20cm x 20cm x 7cm dimension of the casing, and a circular hole cut out at the top with a diameter of 6cm to allow opening for the lighting to be placed.</p>
                  <img src="../images/pic22.PNG" height="320px" width="350px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <p>Here is the actual casing that i made doing the CNC cutting session with Mr Steven's assistance.</p>
+                <img src="../images/casing.jpg" height="320px" width="350px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
                 
-                <p>Since dimension of the base is 20cm x 20cm x 7cm, and the circle at the top has a diameter of 6cm. Assuming the thickness of the CNC wood is 1.5cm. I wanted to create the lithophane design with the height of 15cm by 10 cm. </p>
+                <h4>3D Printing</h4>
+                <p>Next, using the website <a href="https://tool.itslitho.com/CreateModel?_gl=1%2a1irjw2j%2a_ga%2aMTAwMjkyNjg2MS4xNjI5ODE4NTY4%2a_ga_H7338MKRG0%2aMTYyOTgxODU2OC4xLjEuMTYyOTgxODU2OC4w&_ga=2.248658247.1151752067.1629818569-1002926861.1629818568">"itslitho.com"</a> and with the help of a friendly intern at fablab <b>Zac</b> who gave me tips on making a good lithophane by helping me optimize the settings for the 3d printing of lithophane on itslitho and CURA, I created a lithophane which is 10cm x 15cm  using fusion 360 and here is the 3d printed lithophane which is the highlight of the entire design.</p>
+                 <img src="../images/d.jpg" width="350px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <p>I also created a slot for the lithophane which allows me to change the design of the lithophane in the box, this promotes flexibility in the use of the product. The slot design was made with a height of 15cm and length of 10cm with an additional leeway of 0.2cm on both ends on the slot for the lithophane to enter smoothly.</p>
+                <img src="../images/a.jpg"  width="350px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <img src="../images/e.jpg"  width="297px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
                 
-                <p>Mould of rectangle be 5cm x 5cm, with a height of 15cm. With a engrave of 0.5cm of my name.</p>
-                <p>Engraving of 0.02cm on a 10x10cm board.</p>
+                <h4>Laser cutting</h4>
+                <p>I also created a enclosed box for my lithophane design which have slots that can be assembled, the components are designed on fusion 360 as well and i engraved my Logo and name on the box to make it  a unique design of mine.</p>
+                <video width="500"  controls>
+                   <source src="../images/lasercut.mp4" type="video/mp4">
+                   <source src="../images/lasercut.mp4" type="video/ogg">
+                   Your browser does not support the video tag.
+                </video>
                 
-                <p>Engraving of Zedgod on a 10cm x 10cm surface.</p>
+                <p>After laser cutting, i used wood glue to adhere the slots in place, the wood glue takes roughly 30 minutes to dry during which i applied slight pressure with some weight on top of the case so that the areas are in contact with one another.</p>
+                 <img src="../images/c.jpg"  width="297px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                 <img src="../images/b.jpg"  width="297px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <h4>Embedded programing</h4>
+                <p>I used the ISP and ATtiny85 that was created for our individual project for embedded programming since my code is rather simple and ATtiny85 provides sufficient memory for my needs hence there wasn't a need for me to make another program board.</p>
+                <p>On the ATtiny85, i soldered a push button onto the circuit board at where the button on the circuit board was attached to, this allows me to control the board with an extendable button that will be used in the design.</p>
+                 <img src="../images/pic25.jpg"  width="297px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                 <img src="../images/pic24.jpg"  width="297px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <p>With the help of my friend <b>Xavier, mah G i'll always remember you for helping me all the time along the way!</b>I had successfully created a code that will control the colours on the neopixels which is my output device.</p>
+                <p>Here is the first time testing out the code.</p>
+                <video width="200"  controls>
+                   <source src="../images/testled.mp4" type="video/mp4">
+                   <source src="../images/testled.mp4" type="video/ogg">
+                   Your browser does not support the video tag.
+                </video>
+                
+                <p>The code works fine, I eventually finalised the colours to display by making mild changes to the code.</p>
+                <img src="../images/Screenshot%20(24).png"  width="690px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                <img src="../images/Screenshot%20(25).png"  width="690px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <h4>Assembly of all components</h4>
+                
+                <p>With all the required materials prepared, we can assemble the components together.</p>
+                 <img src="../images/111.jpg"  width="350px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                 <img src="../images/222.jpg"  width="350px"  style=" border:solid black; padding:1px; margin-bottom: 20px;"/>
+                
+                <p>And we are done! Let me show you how it works!</p>
+                <video width="300"  controls>
+                   <source src="../images/finally.mp4" type="video/mp4">
+                   <source src="../images/finally.mp4" type="video/ogg">
+                   Your browser does not support the video tag.
+                </video>
+                <p>I showcased the design in a dark room, where the light displays the lithophane in its fully colours, very awesome!</p>
+                
+                
+                <h4>Presentation of project</h4>
+                <p>Here is the image for my presentation:<a href="https://drive.google.com/file/d/1RBKR5tpepMKTlA1l8AALDk-0smU1Bl9m/view?usp=sharing">"Presentation thumbnail"</a>  </p>
+                <p>and here is the video for my presentation: <a href="https://drive.google.com/file/d/15wqwujOXxEj81kUR4uOCZWlIWIXSQyLS/view?usp=sharing">"Presentation video"</a> </p>
+                
+                
+                
+                <h4>Conclusion</h4>
+                <p>In conclusion, throughout the entire module and the final module project, i learnt alot of hands-on skills and gained alot of experiences from all the past failures and attempts that i had made, this experiences allowed me to understand that there is still alot of room for improvement that can be done and i should always strive to make things even better. </p>
+                <p>For my module project, although the idea of the lithophane design was good in my opinion, perhaps i should have consulted a friend or someone for their opinion on my design to see if they were any critical flaws that i may have missed out so that i can work on the design. As i went on with the project without considering the issues that may occured, i had to improvise in what i do often, which would have been better if i had just thought things through and spend more time in the planning stage. Examples of the issues listed by Mr steven during my presentation of my design project includes: Electrical components protruding out of the casing instead of having a fixed port for the plug-in, Neopixels Leds are not mounted on a sturdy platform and electrical board are not mounted onto the CNC casing. So those are the issues identified and one thing i realised was that if i were to receive this as a product design from a client, this are the issues that i would have pointed out myself too. Hence, i should have put in more thought about creating a design that actually incorporates all functionalities as one that is presentable.</p>
+                
+                <p>However, as much as we wanted to go back and change the past and fix those mistakes, we can't. But, we can learn from such experiences and grow to be better! I am still very proud of my design (all the time and effort that i took :p) and if i ever were to create a project, i would make sure to take notes of the important points that i had learnt from all these experience.</p>
+                
+                <p>A warm thank you to all my readers, my teachers <b>Mr Steven & also Mr Yeo</b> for their guidance and support, as well as my friend <b>Xavier</b> for helping me all the time xd and my fellow mates at the workshop! I had a great time in this elective and learnt so many things, and that is a great takeaway from this module!</p>
+                
                 
                 
             </div>
